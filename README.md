@@ -38,5 +38,12 @@ Where:
 
    files (accepted multiple times) <path>
      (required) file names
-
-   Db parser
+```
+# Example:
+```bash
+db_parse -s "," -n ":" -k value1 -a 0,1 -k val2 -a 1,2 file1.txt file2.txt
+```
+with \t spliter, always use ```-u``` argument(for unescape):
+```bash
+db_parse -s "\t" -u -n ":" -k value1 -a 0,1 -k val2 -a 1,2 file1.txt file2.txt
+```
