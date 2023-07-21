@@ -5,9 +5,8 @@ Parse csv db by index
 ```bash
 USAGE:
 
-   db_parse_items_0.1_clang_x64  [-h] [--version] [-n <string>] [-s
-                                 <string>] -a <string> ... -k <string> ...
-                                 files ...
+   db_parse_0.1.1_Os  [-hu] [--version] [-n <string>] [-s <string>] -a
+                      <string> ... -k <string> ... files ...
 
 
 Where:
@@ -18,11 +17,15 @@ Where:
    -n <string>,  --new_spliter <string>
      new_spliter of string
 
+   -u,  --unescape
+     Unescape spliters. To work with '\t', etc.
+
    -k <string>,  --keys <string>  (accepted multiple times)
-     (required) keys of indexes
+     (required) keys of indexes. Example: -k key1 -k key2
 
    -a <string>,  --values <string>  (accepted multiple times)
-     (required) indexes to parse separated by ','. Example: -a '0,1'
+     (required) indexes to parse separated by ','. Example: -a '0,1' -a '3,
+     4'
 
    --,  --ignore_rest
      Ignores the rest of the labeled arguments following this flag.
@@ -34,4 +37,6 @@ Where:
      Displays usage information and exits.
 
    files (accepted multiple times) <path>
-     (required) file names```
+     (required) file names
+
+   Db parser
